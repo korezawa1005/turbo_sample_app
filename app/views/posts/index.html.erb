@@ -1,0 +1,10 @@
+<h1>Turboサンプルアプリ</h1>
+
+<hr>
+<%= turbo_frame_tag dom_id(Post.new) do %>
+  <%= render "new_link" %>
+<% end %>
+<hr>
+<%= turbo_frame_tag Post.table_name do %>
+<%= render @posts %>
+<% end %>
